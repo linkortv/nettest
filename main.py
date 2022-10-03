@@ -17,11 +17,33 @@ class MainWindow(QMainWindow):
       text = "test"
     if platform == "linux" or platform == "linux2":
       import linux
-      start = "started test"
-      self.ui.status_label.setText(start)
-      self.ui.progressBar.setValue(50)
-      t = linux.test()
-      self.ui.status_label.setText(t)
+      status = "ping dns1"
+      self.ui.status_label.setText(status)
+      self.ui.progressBar.setValue(1)
+      linux.fping_dns1()
+      
+      status = "ping dns2"
+      self.ui.status_label.setText(status)
+      self.ui.progressBar.setValue(15)
+      linux.fping_dns2()
+      
+
+      status = "ping yandex"
+      self.ui.status_label.setText(status)
+      self.ui.progressBar.setValue(30)
+      linux.fping_yandex()
+      
+
+      status = "ping google"
+      self.ui.status_label.setText(status)
+      self.ui.progressBar.setValue(45)
+      linux.fping_google()
+      
+
+      status = "traceroute service"
+      self.ui.status_label.setText(status)
+      self.ui.progressBar.setValue(60)
+      linux.trace_service()
       
     elif platform == "darwin":
       import macos
@@ -34,14 +56,6 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == '__main__':
-
-  if platform == "linux" or platform == "linux2":
-    print("it's linux")
-  elif platform == "darwin":
-    print("it's macos")
-  elif platform == "win32":
-    print("it's window")
-
   app = QApplication()
   window = MainWindow()
   window.show()

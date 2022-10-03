@@ -30,11 +30,22 @@ for domen in wot_cluster:
 # print(wot_ips)
 traceroute = "traceroute {ip}".format(ip = valorant_ip)
 
-def test():
-    # os.system(ping_office)
-    os.system(ping_yandex)
-    # os.system(ping_google)
-    # os.system(ping_dns1)
-    os.system(ping_dns2)
-    m = os.popen(traceroute).read()
-    return m
+def fping_yandex():
+    result = os.popen(ping_yandex).read()
+    return result
+
+def fping_google():
+    result = os.popen(ping_google).read()
+    return result
+
+def fping_dns1():
+    result = os.popen(ping_dns1).read()
+    return 1
+
+def fping_dns2():
+    result = os.popen(ping_dns2).read()
+    return result
+
+def trace_service():
+    result = os.popen(traceroute).read()
+    return result
