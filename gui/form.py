@@ -1,98 +1,80 @@
-/********************************************************************************
-** Form generated from reading UI file 'design.ui'
-**
-** Created by: Qt User Interface Compiler version 5.12.8
-**
-** WARNING! All changes made in this file will be lost when recompiling UI file!
-********************************************************************************/
+# -*- coding: utf-8 -*-
 
-#ifndef UI_DESIGN_H
-#define UI_DESIGN_H
+################################################################################
+## Form generated from reading UI file 'design.ui'
+##
+## Created by: Qt User Interface Compiler version 6.3.2
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
 
-#include <QtCore/QVariant>
-#include <QtWidgets/QApplication>
-#include <QtWidgets/QComboBox>
-#include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
-#include <QtWidgets/QMainWindow>
-#include <QtWidgets/QProgressBar>
-#include <QtWidgets/QPushButton>
-#include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
+    QLabel, QLineEdit, QMainWindow, QProgressBar,
+    QPushButton, QSizePolicy, QVBoxLayout, QWidget)
 
-QT_BEGIN_NAMESPACE
-
-class Ui_MainWindow
-{
-public:
-    QWidget *centralwidget;
-    QVBoxLayout *verticalLayout;
-    QLabel *title;
-    QLabel *input_label;
-    QHBoxLayout *horizontalLayout_2;
-    QLineEdit *lineEdit;
-    QComboBox *comboBox;
-    QProgressBar *progressBar;
-    QLabel *status_label;
-    QPushButton *start_test;
-
-    void setupUi(QMainWindow *MainWindow)
-    {
-        if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(150);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
-        MainWindow->setSizePolicy(sizePolicy);
-        MainWindow->setStyleSheet(QString::fromUtf8("background-color: white;"));
-        centralwidget = new QWidget(MainWindow);
-        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        verticalLayout = new QVBoxLayout(centralwidget);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        title = new QLabel(centralwidget);
-        title->setObjectName(QString::fromUtf8("title"));
-        title->setStyleSheet(QString::fromUtf8("color: #32a5fa;\n"
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(150)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        MainWindow.setSizePolicy(sizePolicy)
+        MainWindow.setStyleSheet(u"background-color: white;")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.verticalLayout = QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.title = QLabel(self.centralwidget)
+        self.title.setObjectName(u"title")
+        self.title.setStyleSheet(u"color: #32a5fa;\n"
 "font-size: 20px;\n"
-"font-weight: bold;"));
-        title->setFrameShadow(QFrame::Plain);
-        title->setAlignment(Qt::AlignCenter);
+"font-weight: bold;")
+        self.title.setFrameShadow(QFrame.Plain)
+        self.title.setAlignment(Qt.AlignCenter)
 
-        verticalLayout->addWidget(title);
+        self.verticalLayout.addWidget(self.title)
 
-        input_label = new QLabel(centralwidget);
-        input_label->setObjectName(QString::fromUtf8("input_label"));
-        input_label->setStyleSheet(QString::fromUtf8("font-size: 14px;"));
-        input_label->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        input_label->setIndent(-1);
+        self.input_label = QLabel(self.centralwidget)
+        self.input_label.setObjectName(u"input_label")
+        self.input_label.setStyleSheet(u"font-size: 14px;")
+        self.input_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.input_label.setIndent(-1)
 
-        verticalLayout->addWidget(input_label, 0, Qt::AlignLeft|Qt::AlignBottom);
+        self.verticalLayout.addWidget(self.input_label, 0, Qt.AlignLeft|Qt.AlignBottom)
 
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        lineEdit = new QLineEdit(centralwidget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setMouseTracking(true);
-        lineEdit->setLayoutDirection(Qt::LeftToRight);
-        lineEdit->setStyleSheet(QString::fromUtf8("width: 150px;\n"
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.lineEdit = QLineEdit(self.centralwidget)
+        self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit.setMouseTracking(True)
+        self.lineEdit.setLayoutDirection(Qt.LeftToRight)
+        self.lineEdit.setStyleSheet(u"width: 150px;\n"
 "height: 25px;\n"
 "backgrpund-color: white;\n"
 "border: 1px solid rgb(190, 187, 187);\n"
 "border-radius: 7px;\n"
-"padding-left: 5px;"));
-        lineEdit->setMaxLength(256);
-        lineEdit->setFrame(true);
+"padding-left: 5px;")
+        self.lineEdit.setMaxLength(256)
+        self.lineEdit.setFrame(True)
 
-        horizontalLayout_2->addWidget(lineEdit);
+        self.horizontalLayout_2.addWidget(self.lineEdit)
 
-        comboBox = new QComboBox(centralwidget);
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setEnabled(true);
-        comboBox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+        self.comboBox = QComboBox(self.centralwidget)
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.setObjectName(u"comboBox")
+        self.comboBox.setEnabled(True)
+        self.comboBox.setStyleSheet(u"QComboBox {\n"
 "	background-color: white;\n"
 "	border: 1px solid rgb(190, 187, 187);\n"
 "	height: 25px;\n"
@@ -113,20 +95,20 @@ public:
 "}\n"
 "\n"
 "\n"
-""));
-        comboBox->setInsertPolicy(QComboBox::InsertAtTop);
-        comboBox->setIconSize(QSize(0, 0));
-        comboBox->setDuplicatesEnabled(false);
-        comboBox->setFrame(true);
+"")
+        self.comboBox.setInsertPolicy(QComboBox.InsertAtTop)
+        self.comboBox.setIconSize(QSize(0, 0))
+        self.comboBox.setDuplicatesEnabled(False)
+        self.comboBox.setFrame(True)
 
-        horizontalLayout_2->addWidget(comboBox);
+        self.horizontalLayout_2.addWidget(self.comboBox)
 
 
-        verticalLayout->addLayout(horizontalLayout_2);
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
 
-        progressBar = new QProgressBar(centralwidget);
-        progressBar->setObjectName(QString::fromUtf8("progressBar"));
-        progressBar->setStyleSheet(QString::fromUtf8("QProgressBar {\n"
+        self.progressBar = QProgressBar(self.centralwidget)
+        self.progressBar.setObjectName(u"progressBar")
+        self.progressBar.setStyleSheet(u"QProgressBar {\n"
 "	background-color: rgba(198, 198, 198, 233);\n"
 "	border-radius: 10px;\n"
 "	color: white;\n"
@@ -136,65 +118,55 @@ public:
 "QProgressBar::chunk {\n"
 "	border-radius: 10px;\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.63, y2:0.545455, stop:0 rgba(0, 217, 255, 255), stop:1 rgba(50, 165, 250, 255));\n"
-"}"));
-        progressBar->setValue(24);
+"}")
+        self.progressBar.setValue(24)
 
-        verticalLayout->addWidget(progressBar);
+        self.verticalLayout.addWidget(self.progressBar)
 
-        status_label = new QLabel(centralwidget);
-        status_label->setObjectName(QString::fromUtf8("status_label"));
-        status_label->setAutoFillBackground(false);
-        status_label->setStyleSheet(QString::fromUtf8("margin: 0;\n"
+        self.status_label = QLabel(self.centralwidget)
+        self.status_label.setObjectName(u"status_label")
+        self.status_label.setAutoFillBackground(False)
+        self.status_label.setStyleSheet(u"margin: 0;\n"
 "padding: 0;\n"
-"font-size: 13px; "));
-        status_label->setAlignment(Qt::AlignCenter);
+"font-size: 13px; ")
+        self.status_label.setAlignment(Qt.AlignCenter)
 
-        verticalLayout->addWidget(status_label, 0, Qt::AlignTop);
+        self.verticalLayout.addWidget(self.status_label, 0, Qt.AlignTop)
 
-        start_test = new QPushButton(centralwidget);
-        start_test->setObjectName(QString::fromUtf8("start_test"));
-        start_test->setEnabled(true);
-        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Minimum);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(start_test->sizePolicy().hasHeightForWidth());
-        start_test->setSizePolicy(sizePolicy1);
-        start_test->setStyleSheet(QString::fromUtf8("#start_test {\n"
+        self.start_test = QPushButton(self.centralwidget)
+        self.start_test.setObjectName(u"start_test")
+        self.start_test.setEnabled(True)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.start_test.sizePolicy().hasHeightForWidth())
+        self.start_test.setSizePolicy(sizePolicy1)
+        self.start_test.setStyleSheet(u"#start_test {\n"
 "background-color: #32a5fa;\n"
 "color: white;\n"
 "height: 30px;\n"
 "width: 150px;\n"
-"border-radius: 10%; }"));
-        start_test->setAutoRepeatDelay(300);
+"border-radius: 10%; }")
+        self.start_test.setAutoRepeatDelay(300)
 
-        verticalLayout->addWidget(start_test, 0, Qt::AlignHCenter|Qt::AlignTop);
+        self.verticalLayout.addWidget(self.start_test, 0, Qt.AlignHCenter|Qt.AlignTop)
 
-        MainWindow->setCentralWidget(centralwidget);
+        MainWindow.setCentralWidget(self.centralwidget)
 
-        retranslateUi(MainWindow);
+        self.retranslateUi(MainWindow)
 
-        QMetaObject::connectSlotsByName(MainWindow);
-    } // setupUi
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
 
-    void retranslateUi(QMainWindow *MainWindow)
-    {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-        title->setText(QApplication::translate("MainWindow", "Network test", nullptr));
-        input_label->setText(QApplication::translate("MainWindow", "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\260\320\264\321\200\320\265\321\201 \320\270\320\273\320\270 \320\262\321\213\320\261\320\265\321\200\320\270\321\202\320\265 \320\270\320\267 \321\201\320\277\320\270\321\201\320\272\320\260", nullptr));
-        comboBox->setItemText(0, QApplication::translate("MainWindow", "world of tanks", nullptr));
-        comboBox->setItemText(1, QApplication::translate("MainWindow", "world of warships", nullptr));
-        comboBox->setItemText(2, QApplication::translate("MainWindow", "valorant", nullptr));
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.title.setText(QCoreApplication.translate("MainWindow", u"Network test", None))
+        self.input_label.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441 \u0438\u043b\u0438 \u0432\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0438\u0437 \u0441\u043f\u0438\u0441\u043a\u0430", None))
+        self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"world of tanks", None))
+        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"world of warships", None))
+        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"valorant", None))
 
-        status_label->setText(QApplication::translate("MainWindow", "Scan network", nullptr));
-        start_test->setText(QApplication::translate("MainWindow", "\320\241\321\202\320\260\321\200\321\202", nullptr));
-    } // retranslateUi
+        self.status_label.setText(QCoreApplication.translate("MainWindow", u"Scan network", None))
+        self.start_test.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0442\u0430\u0440\u0442", None))
+    # retranslateUi
 
-};
-
-namespace Ui {
-    class MainWindow: public Ui_MainWindow {};
-} // namespace Ui
-
-QT_END_NAMESPACE
-
-#endif // UI_DESIGN_H
