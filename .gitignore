@@ -1,2 +1,6 @@
 .env
 .vscode
+
+nettest.txt
+
+__pycache__
