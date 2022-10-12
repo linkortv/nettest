@@ -8,27 +8,26 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
-    QLabel, QLineEdit, QMainWindow, QProgressBar,
+from PySide6.QtCore import (QCoreApplication, QMetaObject, QSize, Qt)
+from PySide6.QtGui import ( QIcon)
+from PySide6.QtWidgets import (QComboBox, QFrame, QHBoxLayout,
+    QLabel, QLineEdit, QProgressBar,
     QPushButton, QSizePolicy, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
+
         if not MainWindow.objectName():
-            MainWindow.setObjectName(u"MainWindow")
+            MainWindow.setObjectName(u"Network test")
+        MainWindow.resize(334, 188)
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(150)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setStyleSheet(u"background-color: white;")
+        MainWindow.setWindowTitle('Network test')
+        MainWindow.setWindowIcon(QIcon('icon.png'))
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -49,7 +48,7 @@ class Ui_MainWindow(object):
         self.input_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.input_label.setIndent(-1)
 
-        self.verticalLayout.addWidget(self.input_label, 0, Qt.AlignLeft|Qt.AlignBottom)
+        self.verticalLayout.addWidget(self.input_label)
 
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
@@ -69,6 +68,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.lineEdit)
 
         self.comboBox = QComboBox(self.centralwidget)
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
@@ -133,6 +135,8 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.status_label, 0, Qt.AlignTop)
 
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.start_test = QPushButton(self.centralwidget)
         self.start_test.setObjectName(u"start_test")
         self.start_test.setEnabled(True)
@@ -149,7 +153,20 @@ class Ui_MainWindow(object):
 "border-radius: 10%; }")
         self.start_test.setAutoRepeatDelay(300)
 
-        self.verticalLayout.addWidget(self.start_test, 0, Qt.AlignHCenter|Qt.AlignTop)
+        self.horizontalLayout.addWidget(self.start_test)
+
+        self.full_test = QPushButton(self.centralwidget)
+        self.full_test.setObjectName(u"full_test")
+        self.full_test.setStyleSheet(u"background-color: #32a5fa;\n"
+"color: white;\n"
+"height: 30px;\n"
+"width: 150px;\n"
+"border-radius: 10%; ")
+
+        self.horizontalLayout.addWidget(self.full_test)
+
+
+        self.verticalLayout.addLayout(self.horizontalLayout)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -159,14 +176,18 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.title.setText(QCoreApplication.translate("MainWindow", u"Network test", None))
-        self.input_label.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441 \u0438\u043b\u0438 \u0432\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0438\u0437 \u0441\u043f\u0438\u0441\u043a\u0430", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"world of tanks", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"world of warships", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"valorant", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("Network test", u"Тест сети", None))
+        self.title.setText(QCoreApplication.translate("MainWindow", u"\u0422\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0449\u0438\u043a \u0441\u0435\u0442\u0438", None))
+        self.input_label.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441 \u0438\u043b\u0438 \u0432\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u0435\u0440\u0432\u0438\u0441 \u0438\u0437 \u0441\u043f\u0438\u0441\u043a\u0430", None))
+        self.comboBox.setItemText(0, "")
+        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"world of tanks", None))
+        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"world of warships", None))
+        self.comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"world of warplanes", None))
+        self.comboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"valorant", None))
+        self.comboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"warface", None))
 
         self.status_label.setText(QCoreApplication.translate("MainWindow", u"Scan network", None))
-        self.start_test.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0442\u0430\u0440\u0442", None))
+        self.start_test.setText(QCoreApplication.translate("MainWindow", u"\u0411\u044b\u0441\u0442\u0440\u044b\u0439 \u0442\u0435\u0441\u0442", None))
+        self.full_test.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u043b\u043d\u044b\u0439 \u0442\u0435\u0441\u0442", None))
     # retranslateUi
 

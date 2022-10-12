@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>334</width>
+    <width>328</width>
     <height>188</height>
    </rect>
   </property>
@@ -82,6 +82,9 @@ padding-left: 5px;</string>
         <property name="frame">
          <bool>true</bool>
         </property>
+        <property name="placeholderText">
+         <string>ip address</string>
+        </property>
        </widget>
       </item>
       <item>
@@ -122,6 +125,9 @@ selection-color: black;
           <height>0</height>
          </size>
         </property>
+        <property name="placeholderText">
+         <string>Выбрать</string>
+        </property>
         <property name="duplicatesEnabled">
          <bool>false</bool>
         </property>
@@ -131,6 +137,11 @@ selection-color: black;
         <item>
          <property name="text">
           <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>valorant</string>
          </property>
         </item>
         <item>
@@ -145,7 +156,12 @@ selection-color: black;
         </item>
         <item>
          <property name="text">
-          <string>valorant</string>
+          <string>world of warplanes</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>warface</string>
          </property>
         </item>
        </widget>
