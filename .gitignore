@@ -1,6 +1,6 @@
 .env
 .vscode
-
+.DS_Store
 nettest.txt
 
 __pycache__
