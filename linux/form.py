@@ -58,7 +58,7 @@ class Ui_MainWindow(object):
         self.lineEdit.setLayoutDirection(Qt.LeftToRight)
         self.lineEdit.setStyleSheet(u"width: 150px;\n"
 "height: 25px;\n"
-"backgrpund-color: white;\n"
+"background-color: white;\n"
 "border: 1px solid rgb(190, 187, 187);\n"
 "border-radius: 7px;\n"
 "padding-left: 5px;")
