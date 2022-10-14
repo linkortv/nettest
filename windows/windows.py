@@ -42,7 +42,7 @@ def fping_dns2(count = 1):
     return result
 
 def trace_service(ip):
-    result = os.popen(f"traceroute {ip}").read()
+    result = os.popen(f"tracert {ip}").read()
     return result
 
 def dir_open(directory):
