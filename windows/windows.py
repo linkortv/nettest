@@ -30,15 +30,15 @@ def getAddress(service):
     return switcher.get(service,"Invalid service")
 
 def fping_service(service, count = 1):
-    result = os.popen(f"ping -c {count} {service}").read()
+    result = os.popen(f"ping -n {count} {service}").read()
     return result
 
 def fping_dns1(count = 1):
-    result = os.popen(f"ping -c {count} {DNS1}").read()
+    result = os.popen(f"ping -n {count} {DNS1}").read()
     return result
 
 def fping_dns2(count = 1):
-    result = os.popen(f"ping -c {count} {DNS2}").read()
+    result = os.popen(f"ping -n {count} {DNS2}").read()
     return result
 
 def trace_service(ip):
@@ -47,5 +47,3 @@ def trace_service(ip):
 
 def dir_open(directory):
     os.system(f"start {directory}")
-
-

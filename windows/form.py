@@ -9,7 +9,6 @@
 ################################################################################
 
 from PySide6.QtCore import (QCoreApplication, QMetaObject, QSize, Qt)
-from PySide6.QtGui import ( QIcon)
 from PySide6.QtWidgets import (QComboBox, QFrame, QHBoxLayout,
     QLabel, QLineEdit, QProgressBar,
     QPushButton, QSizePolicy, QVBoxLayout, QWidget)
@@ -27,7 +26,6 @@ class Ui_MainWindow(object):
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setStyleSheet(u"background-color: white;")
         MainWindow.setWindowTitle('Network test')
-        MainWindow.setWindowIcon(QIcon('icon.png'))
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -47,6 +45,12 @@ class Ui_MainWindow(object):
         self.input_label.setStyleSheet(u"font-size: 14px;")
         self.input_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.input_label.setIndent(-1)
+
+        self.input_label2 = QLabel(self.centralwidget)
+        self.input_label2.setObjectName(u"input_label2")
+        self.input_label2.setStyleSheet(u"font-size: 14px;")
+        self.input_label2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.input_label2.setIndent(-1)
 
         self.verticalLayout.addWidget(self.input_label)
 
@@ -105,9 +109,8 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_2.addWidget(self.comboBox)
 
-
         self.verticalLayout.addLayout(self.horizontalLayout_2)
-
+        self.verticalLayout.addWidget(self.input_label2)
         self.progressBar = QProgressBar(self.centralwidget)
         self.progressBar.setObjectName(u"progressBar")
         self.progressBar.setStyleSheet(u"QProgressBar {\n"
@@ -176,9 +179,10 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("Network test", u"Тест сети", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("Nettest", u"Nettest", None))
         self.title.setText(QCoreApplication.translate("MainWindow", u"\u0422\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0449\u0438\u043a \u0441\u0435\u0442\u0438", None))
         self.input_label.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441 \u0438\u043b\u0438 \u0432\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u0435\u0440\u0432\u0438\u0441 \u0438\u0437 \u0441\u043f\u0438\u0441\u043a\u0430", None))
+        self.input_label2.setText(QCoreApplication.translate("MainWindow", u"Пожалуйста, дождитесь окончания\nПолное тестирование может занять до 15 минут", None))
         self.comboBox.setItemText(0, "")
         self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"world of tanks", None))
         self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"world of warships", None))
