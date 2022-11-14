@@ -1,10 +1,8 @@
 import os
+import platform
+import asyncio
 
 valorant_cluster = ['162.249.72.1'] #valorant ip
-
-DNS1 = "213.234.0.2"
-DNS2 = "213.234.2.6"
-
 #кластеры серверов wargaming
 wot_cluster = [ 'login.p1.worldoftanks.net',
                 'login.p2.worldoftanks.net',
@@ -30,15 +28,8 @@ def getAddress(service):
     return switcher.get(service,"Invalid service")
 
 def fping_service(service, count = 1):
-    result = os.popen(f"ping -n {count} {service}").read()
-    return result
-
-def fping_dns1(count = 1):
-    result = os.popen(f"ping -n {count} {DNS1}").read()
-    return result
-
-def fping_dns2(count = 1):
-    result = os.popen(f"ping -n {count} {DNS2}").read()
+    param = '-n' if platform.system().lower() == 'windows' else '-c'
+    result = os.popen(f"ping {param} {count} {service}").read()
     return result
 
 def trace_service(ip):
